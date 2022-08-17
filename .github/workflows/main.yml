@@ -29,7 +29,7 @@ jobs:
         with:
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           rule-nsg-resource-group-name: workflow-trial
-          rule-nsg-name: ManageNsg
+          rule-nsg-name: linux1-nsg
 
       - name: Print Created NSG Rule Name
         run: echo "Rule Name ${{ steps.rule.outputs.rule_name }}"
@@ -40,4 +40,4 @@ jobs:
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           rule-id-for-removal: ${{ steps.rule.outputs.rule_name }}
           rule-nsg-resource-group-name: workflow-trial
-          rule-nsg-name: ManageNsg
+          rule-nsg-name: linux1-nsg
