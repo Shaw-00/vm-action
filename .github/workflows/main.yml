@@ -1,9 +1,6 @@
 name: Public IP and Deploy to azure resource behind nsg
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   build:
