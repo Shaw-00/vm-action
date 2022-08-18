@@ -27,6 +27,7 @@ jobs:
         uses: venura9/manage-nsg@master
         id: rule
         with:
+          rule-inbound-port: 22
           azure-credentials: ${{ secrets.AZURE_CREDENTIALS }}
           rule-nsg-resource-group-name: workflow-trial
           rule-nsg-name: linux1-nsg
