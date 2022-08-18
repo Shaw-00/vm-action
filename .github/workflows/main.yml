@@ -37,13 +37,13 @@ jobs:
       
       - name: ls -a via ssh
         uses: fifsky/ssh-action@master
-        with:
-          command: |
-            cd /tmp
-            ls -a
+        with:          
           host: ${{ secrets.HOST }}
           user: azureuser
           key: ${{ secrets.PRIVATE_KEY}}
+          command: |
+            cd /tmp
+            ls -a
 
       - name: Remove NSG Rule
         uses: venura9/manage-nsg@master
