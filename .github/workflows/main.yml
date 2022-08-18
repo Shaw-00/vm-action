@@ -41,9 +41,7 @@ jobs:
           host: ${{ secrets.HOST }}
           user: azureuser
           key: ${{ secrets.PRIVATE_KEY}}
-          command: |
-            cd /tmp
-            ls -a
+          command: whoami
 
       - name: Remove NSG Rule
         uses: venura9/manage-nsg@master
