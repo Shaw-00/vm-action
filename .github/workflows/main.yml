@@ -42,7 +42,7 @@ jobs:
             cd /tmp
             ls -a
           host: ${{ secrets.HOST }}
-          user: root
+          user: azureuser
           key: ${{ secrets.PRIVATE_KEY}}
 
       - name: Remove NSG Rule
