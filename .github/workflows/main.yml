@@ -41,7 +41,7 @@ jobs:
           host: ${{ secrets.HOST }}
           user: azureuser
           key: ${{ secrets.PRIVATE_KEY}}
-          command: whoami
+          command: whoami && sudo apt install nginx
 
       - name: Remove NSG Rule
         uses: venura9/manage-nsg@master
